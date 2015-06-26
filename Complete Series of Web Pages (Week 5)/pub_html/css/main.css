@@ -157,7 +157,7 @@ button:active, button:focus {
 	margin-top: 5em;
 	height: 30em;
 	
-	background-image: url(../img/hero-dynatac.jpg);
+	background-image: url(../img/Hero_DynaTac.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -182,12 +182,6 @@ h2.home-sub {
 	left: 45%;
 }
 
-.subscribe {
-	background-image: url(../img/hero-dynatac.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-}
 
 /* ---------------- MOODBOARD ------------------- */
 
@@ -211,8 +205,12 @@ h2.home-sub {
 
 .subscribe {
 	display: block;
-	padding: 7em 0 10em 0;
+	padding: 14em 0 4em 0;
 	background-color: #ddd;
+	background-image: url(../img/wallpaper-dynatac.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
 
 .subscribe:after {
@@ -226,7 +224,6 @@ h2.home-sub {
 	font-size: 1.5em;
 	color: #26C6DA;
 	text-align: center;
-	margin-bottom: 1em;
 	margin-left: 3.5em;
 }
 
@@ -390,14 +387,10 @@ h2.home-sub {
 
 /* ---------------- ABOUT US ------------------- */
 
-#history {
-	position: absolute;
-	left: 100%;
-}
-
 .about-tabs {
 	width: 80%;
 	margin: 0em auto 0 auto;
+	padding-top: 30em;
 }
 
 .about, .history {
@@ -451,6 +444,29 @@ h2.home-sub {
 .history-container {
 	left: 100%;
 }
+
+.hero-about {
+	height: 30em;
+	width: 100%;
+	left: 0;
+	position: absolute;
+	
+	background-image: url(../img/aboutus-hero.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.hero-history {
+	height: 30em;
+	width: 100%;
+	left: 100%;
+	position: absolute;
+	
+	background-image: url(../img/history-hero.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
 
 /* ---------------- CONTACT US FORM ------------------- */
 
