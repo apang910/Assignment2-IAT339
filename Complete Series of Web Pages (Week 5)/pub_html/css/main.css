@@ -119,7 +119,7 @@ button:active, button:focus {
 	position: fixed;
 	top: 0;
 	z-index: 2;
-	padding: 1em 0 1em 0;
+	padding: 2em 0 2em 7em;
 	width: 100%;
 	background-color: #fff;
 	
@@ -147,8 +147,9 @@ button:active, button:focus {
 }
 
 .logo {
-	position: relative;
-	margin-top: -1em;
+	position: absolute;
+	margin-top: -1.5em;
+	margin-left: -7em;
 }
 
 /* ---------------- HERO ------------------- */
@@ -192,9 +193,45 @@ h2.home-sub {
 	margin-right: auto;
 }
 
-.product {
+.product, .product-img, .product-img2, .product-img3, .product-img4, .product-img5, .product-img6 {
 	height: 15em;
 	border: 1px solid #000;
+}
+
+.product-img {
+	background-image: url(../img/Hero_RetroPhone1.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.product-img2 {
+	background-image: url(../img/hero_dynatac3.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;	
+}
+
+.product-img3 {
+	background-image: url(../img/motorola_event.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.product-img4 {
+	background-image: url(../img/motorola_event2.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.product-img5 {
+	background-image: url(../img/Hero_DynaTac-rasterized.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.product-img6 {
+	background-image: url(../img/motorola_event3.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 .clear {
