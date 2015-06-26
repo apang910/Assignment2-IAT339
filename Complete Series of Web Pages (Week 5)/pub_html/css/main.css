@@ -1,0 +1,752 @@
+/*
+
+  STYLE GUIDE STYLING  
+  
+*/
+
+*, *:after, *:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+	font-size: 1em;
+	font-family: Light;
+	color: #000;
+	text-align: left;
+}
+
+h1 {
+	font-size: 2em;
+	font-family: Bold;
+	color: #26C6DA;
+	text-align: left;
+}
+
+a:link {
+	text-decoration: none;
+	color: #999;
+}
+
+a:visited {
+	text-decoration: none;
+	color: #999;
+	
+}
+
+button:active, button:focus {
+	border: none;
+	outline: none;
+}
+
+/* Roboto Font */
+
+@font-face {
+	font-family: Bold;
+	src: url(../font/Roboto-Bold.ttf);
+}
+
+@font-face {
+	font-family: Medium;
+	src: url(../font/Roboto-Medium.ttf);
+}
+
+@font-face {
+	font-family: Regular;
+	src: url(../font/Roboto-Regular.ttf);
+}
+
+@font-face {
+	font-family: Light;
+	src: url(../font/Roboto-Light.ttf);
+}
+
+/* End of Roboto Font Face */
+
+/* ---------------- GRIDS ------------------- */
+
+.col-1of12 {
+	width: 8.3333%;
+}
+
+.col-2of12 {
+	width: 16.666%;
+}
+
+.col-3of12 {
+	width: 25%;
+}
+
+.col-4of12 {
+	width: 33.3333%;
+}
+
+.col-5of12 {
+	width: 41.666%;
+}
+
+.col-6of12 {
+	width: 50%;
+}
+
+.col-11of12 {
+	width: 91.6666%;
+}
+
+.col-12of12 {
+	width: 100%;
+}
+
+[class^='col-'] {
+	float: left;
+	padding: 0;
+	text-align: center;
+}
+
+/* ---------------- NAVIGATION ------------------- */
+
+.main-nav {
+	display: inline-block;
+	position: fixed;
+	top: 0;
+	z-index: 2;
+	padding: 1em 0 1em 0;
+	width: 100%;
+	background-color: #fff;
+	
+	-webkit-box-shadow: 0 0.25em 5em -1em #999;
+	-moz-box-shadow: 0 0.25em 5em -1em #999;
+    box-shadow: 0 0.25em 5em -1em #999;
+}
+
+.main-nav:after {
+	content:"";
+	display: block;
+	clear: both;
+}
+
+.main-nav a {
+	font-family: Medium;
+}
+
+.main-nav a:hover {
+	color: #26C6DA;
+}
+
+.main-nav a.current-page {
+	color: #26C6DA;
+}
+
+.logo {
+	position: relative;
+	margin-top: -1em;
+}
+
+/* ---------------- HERO ------------------- */
+
+.hero {
+	margin-top: 5em;
+	height: 30em;
+	
+	background-image: url(../img/hero-dynatac.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+h1.home-title {
+	font-size: 2em;
+	font-family: Bold;
+	color: #26C6DA;
+	padding-top: 5em;
+}
+
+h2.home-sub {
+	font-size: 1em;
+	font-family: Light;
+	color: #000;
+	text-align: left;
+}
+
+.hero .col-5of12 {
+	position: relative;
+	left: 45%;
+}
+
+.subscribe {
+	background-image: url(../img/hero-dynatac.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+/* ---------------- MOODBOARD ------------------- */
+
+.mood-board {
+	height: auto;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.product {
+	height: 15em;
+	border: 1px solid #000;
+}
+
+.clear {
+	clear: both;
+}
+
+/* ---------------- SUBSCRIBE ------------------- */
+
+.subscribe {
+	display: block;
+	padding: 7em 0 10em 0;
+	background-color: #ddd;
+}
+
+.subscribe:after {
+	content:"";
+	display: block;
+	clear: both;
+}
+
+.subscribe p.header {
+	font-family: Regular;
+	font-size: 1.5em;
+	color: #26C6DA;
+	text-align: center;
+	margin-bottom: 1em;
+	margin-left: 3.5em;
+}
+
+.email-input {
+	font-family: Regular;
+	background-color: #fff;
+	border: 0.2em solid #999;
+	color: #26C6DA;
+	transition: all 0.5s ease;
+	font-size: 1em;
+	margin-bottom: 0.5em;
+	margin-left: 5em;
+	padding: 0.5em 0 0.5em 0.5em;
+	width: 20em;
+}
+
+.email-input:focus {
+	outline: none;
+	border: 0.2em solid #26C6DA;
+}
+
+
+.button-signup {
+	font-family: Regular;
+	border: 0.2em solid #26C6DA;
+	text-decoration: none;
+	padding: 0.5em 0;
+	margin-left: 5em;
+	color: #999;
+	width: 20em;
+	font-size: 1em;
+	
+	/*interaction set-up*/
+	background: -webkit-linear-gradient(transparent, transparent 50%, #26C6DA 50%, #26C6DA);
+	background: linear-gradient(transparent, transparent 50%, #26C6DA 50%, #26C6DA);
+	background-size: 100% 200%;
+  	transition: all 0.2s ease;
+}
+
+.button-signup:link, .button-signup:visited {
+	color: #999;
+}
+
+.button-signup:hover {
+	background-position: 100% 100%;
+	color: #fff;
+}
+
+.button-signup:focus {
+	outline: none;
+}
+
+/* ---------------- MULTI-LISTING PRODUCTS ------------------- */
+
+.products-container {
+	width: 100%;
+	overflow-x: hidden;	
+}
+
+.models {
+	width: 100%;
+	margin-top: 10em;
+	background-color: #fff;
+}
+
+.dynatac-thumbnail, .microtac-thumbnail,.iden-thumbnail {
+	height: 10em;
+	border: 1px solid #000;
+}
+
+.dynatac-thumbnail {
+
+}
+
+.microtac-thumbnail {
+
+}
+
+.iden-thumbnail {
+
+}
+
+.dynatac-thumbnail:hover, .microtac-thumbnail:hover,.iden-thumbnail:hover {
+
+}
+
+.filter-tabs {
+	width: 100%;
+	margin-top: 5em;
+	background-color: #fff;
+}
+
+.filter1, .filter2, .filter3 {
+	font-family: Regular; 
+	font-size: 2em;
+	color: #999;
+	border: none;
+	background-color: #fff;
+	width: 100%;
+	padding: 0.5em 0 0.5em 0;
+}
+
+.model {
+	font-family: Regular; 
+	font-size: 2em;
+	color: #999;
+	border: none;
+	background-color: #fff;
+	width: 100%;
+	padding: 0.5em 0 0.5em 0;
+}
+
+.active-tab {
+	background-color: #26C6DA;
+	border: none;
+	color: #fff;
+}
+
+.filter2-products, .filter3-products {
+	position: absolute;
+	width: 100%;
+}
+
+.filter1-products {
+	left: 0;
+	position: relative;
+}
+
+.filter2-products {
+	left: 100%;
+}
+
+.filter3-products {
+	left: 200%;
+}
+
+.filter1-info, .filter2-info, .filter3-info {
+	font-family: Light;
+	font-size: 1em;
+	color: #666;
+	width: 100%;
+	padding: 6em 8em 4em 8em;
+	position: absolute;
+}
+
+.filter1-info {
+	left: 0;
+}
+
+.filter2-info {
+	left: 100%;
+}
+
+.filter3-info {
+	left: 200%;
+}
+
+.info-container {
+	overflow-x: hidden;
+}
+
+/* ---------------- ABOUT US ------------------- */
+
+#history {
+	position: absolute;
+	left: 100%;
+}
+
+.about-tabs {
+	width: 80%;
+	margin: 0em auto 0 auto;
+}
+
+.about, .history {
+	font-family: Regular;
+	border: 0.2em solid #26C6DA;
+	text-decoration: none;
+	padding: 0.5em 0;
+	color: #999;
+	width: 20em;
+	font-size: 1em;
+	
+	/*interaction set-up*/
+	background: -webkit-linear-gradient(transparent, transparent 50%, #26C6DA 50%, #26C6DA);
+	background: linear-gradient(transparent, transparent 50%, #26C6DA 50%, #26C6DA);
+	background-size: 100% 200%;
+  	transition: all 0.2s ease;
+}
+
+.about:hover, .history:hover {
+	background-position: 100% 100%;
+	color: #fff;
+}
+
+.about:focus, .history:focus, .about:active, .history:active {
+	border: 0.2em solid #26C6DA; 
+}
+
+.button-clicked {
+	background: #26C6DA;
+	border: 0.2em solid #26C6DA;
+	color: #fff;
+}
+
+.about-container, .history-container {
+	width: 100%;
+	padding: 8em;
+	position: absolute;
+}
+
+.about-title, .history-title {
+	font-family: Bold;
+	color: #666;
+	margin: 0;
+}
+
+.about-content, .history-content {
+	font-family: Light;
+	color: #666;
+}
+
+.history-container {
+	left: 100%;
+}
+
+/* ---------------- CONTACT US FORM ------------------- */
+
+.form {
+	width: 80%;
+	margin: 10em auto 5em auto;
+	padding: 5em 0 5em 0;
+}
+
+.form-title {
+	font-family: Bold;
+	font-size: 3em;
+	color: #26C6DA;
+	width: 100%;
+	margin: 0 auto 0.5em auto;
+}
+
+.form-label {
+	font-family: Regular;
+	padding: 0.5em 1em;
+	background-color: #999;
+	float: left;
+	transition: all 0.5s ease;
+	color: #fff;
+	font-size: 1em;
+	border: 0.2em solid #999;
+	width: 30%;
+}
+
+.form-input {
+	font-family: Regular;
+	background-color: #fff;
+	padding: 0.5em 1em;
+	padding-right: 5em;
+	border: 0.2em solid #999;
+	color: #26C6DA;
+	transition: all 0.5s ease;
+	font-size: 1em;
+	width: 70%;
+	border-radius: none !important;
+}
+
+.form-input:focus {
+	outline: none;
+	border: 0.2em solid #26C6DA;
+}
+
+.form-input:focus ~ .form-label {
+	background-color: #26C6DA;
+	border: 0.2em solid #26C6DA;
+	color: #FFF;
+}
+
+.form-textarea {
+	font-family: Regular;
+	color: #999;
+	font-size: 1em;
+	padding: 0.5em 1em;
+	border: 0.2em solid #999;
+	transition: all 0.5s ease;
+	width: 100%;
+	border-radius: none !important;
+}
+
+.form-textarea:focus {
+	outline: none;
+	border: 0.2em solid #26C6DA;
+}
+
+#first {
+	margin-right: 1em;
+}
+
+#email, #subject, #message {
+	margin-top: 1em;
+}
+
+.button-submit {
+	font-family: Bold;
+	border: 0.2em solid #26C6DA;
+	text-decoration: none;
+	padding: 0.5em 0;
+	color: #999;
+	width: 100%;
+	font-size: 1.5em;
+	
+	/*interaction set-up*/
+	background: -webkit-linear-gradient(transparent, transparent 50%, #26C6DA 50%, #26C6DA);
+	background: linear-gradient(transparent, transparent 50%, #26C6DA 50%, #26C6DA);
+	background-size: 100% 200%;
+  	transition: all 0.2s ease;
+}
+
+.button-submit:link, .button-submit:visited {
+	color: #999;
+}
+
+.button-submit:hover {
+	background-position: 100% 100%;
+	color: #fff;
+}
+
+.button-submit:focus {
+	outline: none;
+}
+
+.more-contacts {
+	margin: 0 auto 7em auto;
+	width: 80%;
+}
+
+/* ---------------- FOOTER ------------------- */
+
+footer, .about-footer, .products-footer {
+	font-family: Light;
+	color: #999;
+	text-align: center;
+	font-size: 0.75em;
+	padding: 3em 0 1em 0;
+	margin-left: auto;
+	margin-right: auto;
+	width: 60%;
+	border-top: 1px solid #999;
+}
+
+.products-footer {
+	margin-top: 25em;
+}
+
+.about-footer {
+	margin-top: 30em;
+}
+
+/* ---------------- MEDIA QUERIES ------------------- */
+
+@media (max-width: 90rem) {
+	h1.home-title {
+		font-size: 1.5em;
+	}
+
+	.mood-board {
+		height: 60em;
+	}
+
+	.mood-board .col-4of12 {
+		width: 60%;
+	}
+	
+	.mood-board .col-2of12 {
+		width: 40%;
+	}
+	
+	.mood-board .col-3of12 {
+		width: 50%;
+	}
+	
+	.mood-board .col-6of12 {
+		width: 60%;
+	}
+	
+	.more-contacts .col-4of12, .more-contacts .col-3of12 {
+		width: 50%;
+	}
+	
+	.more-contacts .col-5of12 {
+		width: 100%;
+		margin-bottom: 2em;
+	}
+}
+	
+@media (max-width: 80rem) {
+	.form .col-5of12 {
+		width: 70%;
+	}
+	
+	#first, #last {
+		margin-top: 1em;
+		margin-right: 0;
+	}
+
+}
+	
+@media (max-width: 60rem) {
+	.main-nav .col-2of12 {
+		width: 20%;
+	}
+	
+	.hero .col-5of12 {
+		width: 75%;
+		position: none;
+		left: 12%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	.filter1-products .col-4of12, .filter2-products .col-4of12, .filter3-products .col-4of12 {
+		width: 100%;
+	}
+	
+	.models .col-4of12 {
+		width: 100%;
+	}
+	
+	.more-contacts .col-4of12, .more-contacts .col-3of12 {
+		width: 100%;
+	}
+	
+	.form .col-5of12 {
+		width: 100%;
+	}
+	
+		
+	.more-contacts .col-4of12, .more-contacts .col-3of12 {
+		margin-bottom: 2em;
+	}
+}
+
+@media (max-width: 50rem) {
+	.subscribe p.header {
+		font-size: 1.25em;
+		width: 15em;
+	}
+	
+	.mood-board .col-4of12, .mood-board .col-2of12 , .mood-board .col-3of12, .mood-board .col-6of12   {
+		width: 100%;
+	}
+	
+	.mood-board {
+		height: 120em;
+	}
+	
+	.filter1-info, .filter2-info, .filter3-info {
+		padding: 6em 2em 4em 2em;
+	}
+	
+	.about-container, .history-container  {
+		padding: 6em;
+	}
+	
+	.filter1, .filter2, .filter3 {
+		font-size: 1.5em;
+	}
+	
+}
+
+@media (max-width: 35rem) {
+	.main-nav .col-1of12, .main-nav .col-2of12 {
+		width: 100%;
+	}
+	
+	.hero {
+		margin-top: 8em;
+		height: 40em;
+	}
+	
+	.subscribe .col-5of12 {
+		width: 100%;
+	}
+	
+	.email-input {
+		width: 15em;
+		margin-left: 0;
+	}
+	
+	.button-signup {
+		width: 15em;
+		margin-left: 0;
+	}
+	
+	.subscribe p.header {
+		margin-left: 0;
+		width: 15em;
+	}
+	
+	.models {
+		margin-top: 10em;
+	}
+	
+	.filter1-info, .filter2-info, .filter3-info {
+		padding: 6em 2em 4em 2em;
+	}
+	
+	.products-footer {
+		margin-top: 30em;
+	}
+	
+	.about-container, .history-container {
+		padding: 4em 2em 4em 2em;
+	}
+		
+	.filter1, .filter2, .filter3 {
+		font-size: 1em;
+		padding: 1em;
+	}
+	
+	.form-label, .form-input, .form-textarea {
+		font-size: 0.5em;
+	}
+}
