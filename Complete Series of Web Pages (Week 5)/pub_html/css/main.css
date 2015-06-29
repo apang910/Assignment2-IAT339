@@ -154,8 +154,22 @@ button:active, button:focus {
 
 /* ---------------- HERO ------------------- */
 
+.nav-trigger {
+	position: absolute;
+	font-family: Regular;
+	border: 0.2em solid #26C6DA;
+	text-decoration: none;
+	color: #999;
+	width: 100%;
+	font-size: 1em;
+	text-align: center;
+	
+	/*interaction set-up*/
+	background-color: transparent;
+}
+
 .hero {
-	margin-top: 5em;
+	margin-top: 4em;
 	height: 30em;
 	
 	background-image: url(../img/Hero_DynaTac.jpg);
@@ -193,42 +207,65 @@ h2.home-sub {
 	margin-right: auto;
 }
 
-.product, .product-img, .product-img2, .product-img3, .product-img4, .product-img5, .product-img6 {
+.board, .board2,  .board-img, .board-img2, .board-img3, .board-img4, .board-img5, .board-img6 {
 	height: 15em;
-	border: 1px solid #000;
 }
 
-.product-img {
+.board .board-content {
+	font-family: Regular;
+	padding: 0 1.5em 1.5em 0em;
+	text-align: left;
+}
+
+.board2 .board-content {
+	font-family: Regular;
+	padding: 0 1.5em 1.5em 1.5em;
+	text-align: left;	
+}
+
+.board-header {
+	margin: 0;
+	padding: 1.5em 0 0 0;
+	font-family: Bold;
+	text-align: left;
+	font-size: 1em;
+}
+
+.board2 .board-header {
+	padding: 1.5em 1.5em 0 1.5em;
+}
+
+.board-img {
 	background-image: url(../img/Hero_RetroPhone1.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 
-.product-img2 {
+.board-img2 {
 	background-image: url(../img/hero_dynatac3.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;	
 }
 
-.product-img3 {
+.board-img3 {
 	background-image: url(../img/motorola_event.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 
-.product-img4 {
+.board-img4 {
 	background-image: url(../img/motorola_event2.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 
-.product-img5 {
+.board-img5 {
 	background-image: url(../img/Hero_DynaTac-rasterized.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 
-.product-img6 {
+.board-img6 {
 	background-image: url(../img/motorola_event3.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -646,6 +683,12 @@ footer, .about-footer, .products-footer {
 
 	.mood-board {
 		height: 60em;
+		border-left: 1px solid #ddd;
+		border-right: 1px solid #ddd;
+	}
+	
+	.board .board-header, .board .board-content {
+		padding-left: 1.5em;
 	}
 
 	.mood-board .col-4of12 {
@@ -688,7 +731,7 @@ footer, .about-footer, .products-footer {
 	
 @media (max-width: 60rem) {
 	.main-nav .col-2of12 {
-		width: 20%;
+		width: 25%;
 	}
 	
 	.hero .col-5of12 {
@@ -722,6 +765,10 @@ footer, .about-footer, .products-footer {
 }
 
 @media (max-width: 50rem) {
+	.main-nav .logo {
+		position: absolute;
+	}
+
 	.subscribe p.header {
 		font-size: 1.25em;
 		width: 15em;
@@ -750,12 +797,23 @@ footer, .about-footer, .products-footer {
 }
 
 @media (max-width: 35rem) {
+	.main-nav {
+		padding: 0;
+	}
+
 	.main-nav .col-1of12, .main-nav .col-2of12 {
+		display: none;
 		width: 100%;
+		margin-bottom: 3em;
+	}
+	
+	.main-nav .logo {
+		position: relative;
+		margin: 0;
 	}
 	
 	.hero {
-		margin-top: 8em;
+		margin: 0;
 		height: 40em;
 	}
 	
