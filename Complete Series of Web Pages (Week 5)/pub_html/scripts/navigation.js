@@ -11,4 +11,11 @@ $(function(){
 			$(this).addClass('current-page');
 		}
 	});
+	
+	// when nav-trigger is clicked
+	$('.nav-trigger').click(function() {
+	
+		// open navigation
+		$('.main-nav').toggle();
+	});
 });
