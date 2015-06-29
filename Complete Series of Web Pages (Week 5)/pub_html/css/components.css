@@ -159,6 +159,67 @@ ul.hero_anchors{
 }
 
 
+/* ---------------- ABOUT US ------------------- */
+
+.about-tabs {
+	width: 80%;
+	margin: 0em auto 0 auto;
+	padding-top: 30em;
+}
+
+.about, .history {
+	font-family: Regular;
+	border: 0.2em solid #26C6DA;
+	text-decoration: none;
+	padding: 0.5em 0;
+	color: #999;
+	width: 20em;
+	font-size: 1em;
+	
+	/*interaction set-up*/
+	background: -webkit-linear-gradient(transparent, transparent 50%, #26C6DA 50%, #26C6DA);
+	background: linear-gradient(transparent, transparent 50%, #26C6DA 50%, #26C6DA);
+	background-size: 100% 200%;
+  	transition: all 0.2s ease;
+}
+
+
+.about:hover, .history:hover {
+	background-position: 100% 100%;
+	color: #fff;
+}
+
+.about:focus, .history:focus, .about:active, .history:active {
+	border: 0.2em solid #26C6DA; 
+}
+
+.button-clicked {
+	background: #26C6DA;
+	border: 0.2em solid #26C6DA;
+	color: #fff;
+}
+
+/* ---------------- FOOTER ------------------- */
+
+footer, .about-footer, .products-footer {
+	font-family: Light;
+	color: #999;
+	text-align: center;
+	font-size: 0.75em;
+	padding: 3em 0 1em 0;
+	margin-left: auto;
+	margin-right: auto;
+	width: 60%;
+	border-top: 1px solid #999;
+}
+
+.products-footer {
+	margin-top: 25em;
+}
+
+.about-footer {
+	margin-top: 30em;
+}
 
 
 
