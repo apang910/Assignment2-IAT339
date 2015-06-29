@@ -10,6 +10,10 @@
 	box-sizing: border-box;
 }
 
+html  {
+	overflow-x: hidden;
+}
+
 body {
 	margin: 0;
 	padding: 0;
@@ -44,8 +48,11 @@ a:visited {
 }
 
 button:active, button:focus {
-	border: none;
 	outline: none;
+}
+
+.page-wrapper {
+	overflow-x: hidden;
 }
 
 /* Roboto Font */
@@ -152,21 +159,33 @@ button:active, button:focus {
 	margin-left: -7em;
 }
 
-/* ---------------- HERO ------------------- */
-
+/* for mobile */
 .nav-trigger {
-	position: absolute;
+	position: fixed;
 	font-family: Regular;
 	border: 0.2em solid #26C6DA;
 	text-decoration: none;
 	color: #999;
-	width: 100%;
+	width: 20%;
+	right: 5%;
 	font-size: 1em;
 	text-align: center;
-	
-	/*interaction set-up*/
-	background-color: transparent;
+	padding: 0.5em 0 0.5em 0;
+	background-color: #fff;
 }
+
+.nav-mobile {
+	position: fixed;
+	width: 100%;
+	z-index: 3;
+	display: none;
+	
+	-webkit-box-shadow: 0 0.25em 5em -1em #999;
+	-moz-box-shadow: 0 0.25em 5em -1em #999;
+    box-shadow: 0 0.25em 5em -1em #999;
+}
+
+/* ---------------- HERO ------------------- */
 
 .hero {
 	margin-top: 4em;
@@ -352,14 +371,9 @@ h2.home-sub {
 
 /* ---------------- MULTI-LISTING PRODUCTS ------------------- */
 
-.products-container {
-	width: 100%;
-	overflow-x: hidden;	
-}
-
 .models {
 	width: 100%;
-	margin-top: 10em;
+	padding-top: 10em;
 	background-color: #fff;
 }
 
@@ -384,13 +398,7 @@ h2.home-sub {
 
 }
 
-.filter-tabs {
-	width: 100%;
-	margin-top: 5em;
-	background-color: #fff;
-}
-
-.filter1, .filter2, .filter3 {
+.model {
 	font-family: Regular; 
 	font-size: 2em;
 	color: #999;
@@ -400,7 +408,18 @@ h2.home-sub {
 	padding: 0.5em 0 0.5em 0;
 }
 
-.model {
+.career-container {
+	width: 100%;
+	position: relative;
+}
+
+.filter-tabs {
+	width: 100%;
+	padding-top: 4.5em;
+	background-color: #fff;
+}
+
+.filter1, .filter2, .filter3 {
 	font-family: Regular; 
 	font-size: 2em;
 	color: #999;
@@ -416,6 +435,10 @@ h2.home-sub {
 	color: #fff;
 }
 
+.job {
+	height: 15em;
+}
+
 .filter2-products, .filter3-products {
 	position: absolute;
 	width: 100%;
@@ -423,7 +446,8 @@ h2.home-sub {
 
 .filter1-products {
 	left: 0;
-	position: relative;
+	position: absolute;
+	width: 100%;
 }
 
 .filter2-products {
@@ -432,6 +456,13 @@ h2.home-sub {
 
 .filter3-products {
 	left: 200%;
+}
+
+.info-container {
+	position: relative;
+	width: 100%;
+	height: 20em;
+	overflow-x: hidden;
 }
 
 .filter1-info, .filter2-info, .filter3-info {
@@ -453,10 +484,6 @@ h2.home-sub {
 
 .filter3-info {
 	left: 200%;
-}
-
-.info-container {
-	overflow-x: hidden;
 }
 
 /* ---------------- ABOUT US ------------------- */
@@ -546,8 +573,8 @@ h2.home-sub {
 
 .form {
 	width: 80%;
-	margin: 10em auto 5em auto;
-	padding: 5em 0 5em 0;
+	margin: 0em auto 5em auto;
+	padding: 15em 0 5em 0;
 }
 
 .form-title {
@@ -667,7 +694,7 @@ footer, .about-footer, .products-footer {
 }
 
 .products-footer {
-	margin-top: 25em;
+	margin-top: 5em;
 }
 
 .about-footer {
@@ -733,7 +760,7 @@ footer, .about-footer, .products-footer {
 	.main-nav .col-2of12 {
 		width: 25%;
 	}
-	
+
 	.hero .col-5of12 {
 		width: 75%;
 		position: none;
@@ -765,10 +792,20 @@ footer, .about-footer, .products-footer {
 }
 
 @media (max-width: 50rem) {
-	.main-nav .logo {
-		position: absolute;
+	.main-nav {
+		display: block;
+		padding-left: 10em;
+	}
+	
+	.col-1of12 .logo {
+		display: block;
 	}
 
+	.nav-trigger {
+		display: none;
+	}
+	
+	
 	.subscribe p.header {
 		font-size: 1.25em;
 		width: 15em;
@@ -798,18 +835,39 @@ footer, .about-footer, .products-footer {
 
 @media (max-width: 35rem) {
 	.main-nav {
-		padding: 0;
-	}
-
-	.main-nav .col-1of12, .main-nav .col-2of12 {
+		padding: 3em 0 0 0;
 		display: none;
-		width: 100%;
-		margin-bottom: 3em;
+		margin-top: 4em;
 	}
 	
-	.main-nav .logo {
+	.nav-trigger {
+		margin-top: -3.5em;
+		display: block;
+	}
+	
+	.nav-mobile {
+		background-color: #fff;
+		display: block;
+	}
+	
+	.logo-mobile {
 		position: relative;
-		margin: 0;
+		left: 10%;
+		margin-left: 0;
+		margin-top: 0;
+	}
+	
+	.col-1of12 .logo {
+		display: none;
+	}
+	
+	.main-nav .col-2of12 {
+		width: 100%;
+		margin-bottom: 2em;
+	}
+	
+	.first-link {
+		margin-top: 4em;
 	}
 	
 	.hero {
@@ -836,16 +894,8 @@ footer, .about-footer, .products-footer {
 		width: 15em;
 	}
 	
-	.models {
-		margin-top: 10em;
-	}
-	
 	.filter1-info, .filter2-info, .filter3-info {
 		padding: 6em 2em 4em 2em;
-	}
-	
-	.products-footer {
-		margin-top: 30em;
 	}
 	
 	.about-container, .history-container {
