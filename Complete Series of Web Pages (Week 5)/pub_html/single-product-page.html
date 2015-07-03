@@ -6,19 +6,36 @@
 		<title>IAT 339 - Project 02</title>
 		
 		<link href="css/main.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/colorbox.css">
 		 
 		<!--- Referencing JQuery from CDN -->
 		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 		
 		<script src="scripts/navigation.js"></script>
-		
-		<link rel="stylesheet" href="css/colorbox.css">
 		<script type="text/javascript" src="scripts/jquery.colorbox.js"></script>
 		
-		<script>
+		<script type="text/javascript">
 		$(document).ready(function(){
-			$(".checkout").colorbox({iframe:true, width:"90%", height:"100%"});
+			$(".checkout-page").colorbox({iframe:true, width:"80%", height:"100%"});
 		});
+		
+		jQuery(window).resize(function(){
+		  // Resize Colorbox when resizing window or changing mobile device orientation
+		  resizeColorBox();
+		  window.addEventListener("orientationchange", resizeColorBox, false);
+		});
+
+		var resizeTimer;
+		function resizeColorBox() {
+		  if (resizeTimer) {
+			clearTimeout(resizeTimer);
+		  }
+		  resizeTimer = setTimeout(function() {
+			if (jQuery('#cboxOverlay').is(':visible')) {
+			  jQuery.colorbox.reload();
+			}
+		  }, 300);
+		}
 		</script>
 		
 	</head>
@@ -74,16 +91,14 @@
 		</div>
 		
 		<div class="product-video">
-			<video width="100%" height="100%" controls>
-				<source src="movie.mp4" type="video/mp4">
-				<source src="movie.ogg" type="video/ogg">
-
-			</video>
+			<iframe width="100%" height="600px"
+			src="http://www.youtube.com/embed/0WUF3yjgGf4">
+			</iframe>
 		</div>
 		
 		<div class="product-buy">
 			<p class="buy-now">Buy your DynaTAC 8000x Now!</p>
-			<a href="checkout-page.html" class="checkout"><button class="button-buy">Add to Cart</button></a>
+			<a href="checkout-page.html" class="checkout-page"><button class="button-buy">Add to Cart</button></a>
 		</div>
 		
 		<footer class="products-footer"> © 2015 Kenny Hong + Alan Pang. All rights reserved </footer>
