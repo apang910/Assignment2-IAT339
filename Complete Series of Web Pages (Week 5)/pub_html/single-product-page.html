@@ -12,6 +12,15 @@
 		
 		<script src="scripts/navigation.js"></script>
 		
+		<link rel="stylesheet" href="css/colorbox.css">
+		<script type="text/javascript" src="scripts/jquery.colorbox.js"></script>
+		
+		<script>
+		$(document).ready(function(){
+			$(".checkout").colorbox({iframe:true, width:"90%", height:"100%"});
+		});
+		</script>
+		
 	</head>
 
 	<body>
@@ -53,7 +62,7 @@
 				radiotelephone cellular system. A low-power handset was a fundamental element of the system.
 				<p>
 				
-				<p class="price">$25.00 CAD</p>
+				<p class="price">$2500.00 CAD</p>
 				
 			</div>
 		
@@ -74,7 +83,7 @@
 		
 		<div class="product-buy">
 			<p class="buy-now">Buy your DynaTAC 8000x Now!</p>
-			<button class="button-buy">Add to Cart</button>
+			<a href="checkout-page.html" class="checkout"><button class="button-buy">Add to Cart</button></a>
 		</div>
 		
 		<footer class="products-footer"> © 2015 Kenny Hong + Alan Pang. All rights reserved </footer>
