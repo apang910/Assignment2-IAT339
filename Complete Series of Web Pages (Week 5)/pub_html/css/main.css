@@ -46,6 +46,15 @@ button:active, button:focus {
 	outline: none;
 }
 
+ul {
+	list-style: circle;
+	text-align: left;
+}
+
+li {
+	color: #26C6DA;
+}
+
 .page-wrapper {
 	overflow: hidden;
 }
@@ -98,6 +107,10 @@ button:active, button:focus {
 
 .col-6of12 {
 	width: 50%;
+}
+
+.col-8of12 {
+	width: 66.6667%;
 }
 
 .col-11of12 {
@@ -160,7 +173,7 @@ button:active, button:focus {
 	font-family: Regular;
 	border: 0.2em solid #26C6DA;
 	text-decoration: none;
-	color: #999;
+	color: #26C6DA;
 	width: 20%;
 	right: 5%;
 	font-size: 1em;
@@ -202,7 +215,7 @@ h1.home-title {
 h2.home-sub {
 	font-size: 1em;
 	font-family: Light;
-	color: #000;
+	color: #fff;
 	text-align: left;
 }
 
@@ -223,6 +236,7 @@ h2.home-sub {
 
 .board, .board2,  .board-img, .board-img2, .board-img3, .board-img4, .board-img5, .board-img6 {
 	height: 15em;
+	transition: all 0.3s ease;
 }
 
 .board .board-content {
@@ -249,10 +263,29 @@ h2.home-sub {
 	padding: 1.5em 1.5em 0 1.5em;
 }
 
+.board:hover {
+	background-image: url(../img/IAT339-ImageOverlay.png);
+	color: #fff;
+}
+
+.board-content-overlay {
+	display: none;
+	padding: 2em;
+	color: #fff;
+}
+
 .board-img {
 	background-image: url(../img/Hero_RetroPhone1.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
+}
+
+.board-img:hover {
+	background-image: url(../img/Hero_RetroPhone1-overlay.jpg);
+}
+
+.board-img:hover .board-content-overlay {
+	display: block;
 }
 
 .board-img2 {
@@ -261,10 +294,26 @@ h2.home-sub {
 	background-repeat: no-repeat;	
 }
 
+.board-img2:hover {
+	background-image: url(../img/hero_dynatac3-overlay.jpg);
+}
+
+.board-img2:hover .board-content-overlay {
+	display: block;
+}
+
 .board-img3 {
 	background-image: url(../img/motorola_event.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
+}
+
+.board-img3:hover {
+	background-image: url(../img/motorola_event-overlay.jpg);
+}
+
+.board-img3:hover .board-content-overlay {
+	display: block;
 }
 
 .board-img4 {
@@ -273,16 +322,40 @@ h2.home-sub {
 	background-repeat: no-repeat;
 }
 
+.board-img4:hover {
+	background-image: url(../img/motorola_event2-overlay.jpg);
+}
+
+.board-img4:hover .board-content-overlay {
+	display: block;
+}
+
 .board-img5 {
 	background-image: url(../img/Hero_DynaTac-rasterized.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 
+.board-img5:hover {
+	background-image: url(../img/Hero_DynaTac-rasterized-overlay.jpg);
+}
+
+.board-img5:hover .board-content-overlay {
+	display: block;
+}
+
 .board-img6 {
 	background-image: url(../img/motorola_event3.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
+}
+
+.board-img6:hover {
+	background-image: url(../img/motorola_event3-overlay.jpg);
+}
+
+.board-img6:hover .board-content-overlay {
+	display: block;
 }
 
 .clear {
@@ -295,7 +368,7 @@ h2.home-sub {
 	display: block;
 	padding: 14em 0 4em 0;
 	background-color: #ddd;
-	background-image: url(../img/wallpaper-dynatac.jpg);
+	background-image: url(../img/wallpaper-dynatac-overlay.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -340,7 +413,7 @@ h2.home-sub {
 	text-decoration: none;
 	padding: 0.5em 0;
 	margin-left: 5em;
-	color: #999;
+	color: #26C6DA;
 	width: 20em;
 	font-size: 1em;
 	
@@ -366,6 +439,11 @@ h2.home-sub {
 
 /* ---------------- MULTI-LISTING PRODUCTS ------------------- */
 
+.list-element {
+	color: #fff;
+	text-align: left;
+}
+
 .models {
 	width: 100%;
 	padding-top: 10em;
@@ -375,6 +453,26 @@ h2.home-sub {
 .dynatac-thumbnail, .microtac-thumbnail,.iden-thumbnail {
 	height: 20em;
 	border: 1px solid #000;
+	transition: 0.3s all ease;
+}
+
+.dynatac-overlay, .microtac-overlay, .iden-overlay {
+	font-family: Regular;
+	display: none;
+}
+
+.dynatac-overlay {
+	padding-left: 13em;
+	padding-top: 2em;
+}
+
+.iden-overlay {
+	padding-left: 13em;
+	padding-top: 2em;
+}
+
+.microtac-overlay {
+	padding-top: 2em;
 }
 
 .dynatac-thumbnail {
@@ -383,10 +481,26 @@ h2.home-sub {
 	background-repeat: no-repeat;
 }
 
+.dynatac-thumbnail:hover {
+	background-image: url(../img/Hero_DynaTac-rasterized-overlay.jpg);
+}
+
+.dynatac-thumbnail:hover .dynatac-overlay {
+	display: block;
+}
+
 .microtac-thumbnail {
 	background-image: url(../img/Hero_MicroTAC.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
+}
+
+.microtac-thumbnail:hover {
+	background-image: url(../img/Hero_MicroTAC-overlay.jpg);
+}
+
+.microtac-thumbnail:hover .microtac-overlay {
+	display: block;
 }
 
 .iden-thumbnail {
@@ -395,16 +509,12 @@ h2.home-sub {
 	background-repeat: no-repeat;
 }
 
-.dynatac-thumbnail:hover{
-
-}
-
-.microtac-thumbnail:hover {
-
-}
-
 .iden-thumbnail:hover {
+	background-image: url(../img/iDen-overlay.jpg);
+}
 
+.iden-thumbnail:hover .iden-overlay {
+	display: block;
 }
 
 .model {
@@ -490,6 +600,115 @@ h2.home-sub {
 .filter3-info {
 	left: 200%;
 }
+
+/* ---------------- SINGLE PRODUCT PAGE ------------------- */
+
+.hero-product {
+	margin-top: 4em;
+	height: 30em;
+	
+	background-image: url(../img/Hero_DynaTac-overlay.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+.hero-product-title {
+	font-size: 3em;
+	font-family: Bold;
+	color: #26C6DA;
+	padding-top: 2em;
+	padding-left: 5em;
+}
+
+.product-container {
+	margin-top: 5em;
+}
+
+.specs {
+	font-size: 3em;
+	font-family: Bold;
+	color: #26C6DA;
+	padding: 3em 0 0 5em;
+}
+
+.product-specs {
+	font-family: Regular;
+	font-size: 1em;
+	padding: 2em 0 0 15em;
+}
+
+.product-list-element {
+	color: #000;
+}
+
+.product-content {
+	font-family: Regular;
+	font-size: 1em;
+	padding: 2em 0 0 15em;
+}
+
+.price {
+	font-family: Bold;
+	font-size: 3em;
+	padding: 1em 0 0 5em;
+	color: #26C6DA;
+}
+
+.product-image {
+	height: 50em;
+	width: 100%;
+	float: right;
+	
+	background-image: url(../img/dynatac_product_image.jpg);
+	background-size: 90%;
+	background-repeat: no-repeat;
+}
+
+.product-buy {
+	width: 100%;
+	margin-top: 7em;
+}
+
+.buy-now {
+	font-family: Bold;
+	font-size: 4em;
+	text-align: center;
+	color: #26C6DA;
+}
+
+.button-buy {
+	font-family: Regular;
+	position: relative;
+	border: 0.2em solid #26C6DA;
+	text-decoration: none;
+	padding: 0.5em 0;
+	margin: 2em 0 3em -20%;
+	color: #26C6DA;
+	left: 50%;
+	width: 40%;
+	font-size: 2em;
+	
+	/*interaction set-up*/
+	background: -webkit-linear-gradient(transparent, transparent 50%, #26C6DA 50%, #26C6DA);
+	background: linear-gradient(transparent, transparent 50%, #26C6DA 50%, #26C6DA);
+	background-size: 100% 200%;
+  	transition: all 0.2s ease;
+}
+
+.button-buy:link, .button-buy:visited {
+	color: #999;
+}
+
+.button-buy:hover {
+	background-position: 100% 100%;
+	color: #fff;
+}
+
+.button-buy:focus {
+	outline: none;
+}
+
 
 /* ---------------- ABOUT US ------------------- */
 
@@ -761,6 +980,7 @@ footer, .about-footer, .products-footer {
 
 .products-footer {
 	margin-top: 5em;
+	margin-bottom: 5em;
 }
 
 .about-footer {
@@ -808,6 +1028,10 @@ footer, .about-footer, .products-footer {
 		width: 100%;
 		margin-bottom: 2em;
 	}
+	
+	.dynatac-overlay, .iden-overlay {
+		padding-left: 5em;
+	}
 }
 	
 @media (max-width: 80rem) {
@@ -818,6 +1042,26 @@ footer, .about-footer, .products-footer {
 	#first, #last {
 		margin-top: 1em;
 		margin-right: 0;
+	}
+	
+	.hero-product-title {
+		font-size: 2em;
+	}
+	
+	.specs {
+		padding-top: 1em;
+	}
+	
+	.specs, .price {
+		padding-left: 3em;
+	}
+	
+	.product-specs, .product-content {
+		padding-left: 9em;
+	}
+	
+	.product-image {
+		height: 40em;
 	}
 
 }
@@ -835,12 +1079,45 @@ footer, .about-footer, .products-footer {
 		margin-right: auto;
 	}
 	
+	.board-content-overlay {
+		display: block;
+	}
+	
+	.board-img {
+		background-image: url(../img/Hero_RetroPhone1-overlay.jpg);
+	}
+	
+	.board-img2 {
+		background-image: url(../img/hero_dynatac3-overlay.jpg);
+	}
+	
+	.board-img3 {
+		background-image: url(../img/motorola_event-overlay.jpg);
+	}
+	
+	.board-img4 {
+		background-image: url(../img/motorola_event2-overlay.jpg);
+	}
+	
+	.board-img5 {
+		background-image: url(../img/Hero_DynaTac-rasterized-overlay.jpg);
+	}
+	
+	.board-img6 {
+		background-image: url(../img/motorola_event3-overlay.jpg);
+	}
+	
 	.filter1-products .col-4of12, .filter2-products .col-4of12, .filter3-products .col-4of12 {
 		width: 100%;
 	}
 	
 	.models .col-4of12 {
 		width: 100%;
+	}
+	
+	.microtac-overlay, .dynatac-overlay, .iden-overlay {
+		padding: 3em;
+		font-size: 1.5em;
 	}
 	
 	.more-contacts .col-4of12, .more-contacts .col-3of12 {
@@ -862,6 +1139,31 @@ footer, .about-footer, .products-footer {
 	.filter1, .filter2, .filter3 {
 		font-size: 1.5em;
 		padding: 1em 0 1em 0;
+	}
+	
+	.specs {
+		padding-top: 0.5em;
+	}
+	
+	.specs, .price {
+		padding-left: 3em;
+		font-size: 2em;
+	}
+	
+	.product-specs, .product-content {
+		padding-left: 6em;
+	}
+	
+	.product-image {
+		height: 35em;
+	}
+	
+	.buy-now {
+		font-size: 2em;
+	}
+	
+	.button-buy {
+		font-size: 1em;
 	}
 }
 
@@ -913,6 +1215,59 @@ footer, .about-footer, .products-footer {
 	.filter-tabs {
 		padding-top: 4.5em;
 	}
+	
+	.hero-product-title {
+		padding-left: 3em;
+		
+	}
+	
+	.product-container {
+		margin-top: 3em;
+	}
+	
+	.specs {
+		padding-top: 0.25em;
+	}
+	
+	.specs, .price {
+		padding-left: 3em;
+	}
+	
+	.price {
+		position: absolute;
+		margin-left: 55%;
+		margin-top: -2em;
+	}
+	
+	.product-specs, .product-content {
+		padding-left: 6em;
+		padding-top: 0.5em;
+	}
+	
+	.product-image {
+		height: 30em;
+	}
+}
+
+@media (max-width: 45rem) {
+	.product-container .col-6of12 {
+		width: 100%;
+	}
+	
+	.price {
+		position: static;
+		margin: 0;
+	}
+	
+	.product-content {
+		padding-right: 6em;
+	}
+	
+	.product-image {
+		margin-top: 5em;
+		height: 50em;
+		width: 110%;
+	}
 }
 
 @media (max-width: 35rem) {
@@ -927,9 +1282,15 @@ footer, .about-footer, .products-footer {
 		display: block;
 	}
 	
+	.nav-clicked {
+		background-color: #26C6DA;
+		color: #fff;
+	}
+	
 	.nav-mobile {
 		background-color: #fff;
 		display: block;
+		top: 0;
 	}
 	
 	.logo-mobile {
@@ -984,6 +1345,10 @@ footer, .about-footer, .products-footer {
 		width: 6em;
 	}
 	
+	.hero-container {
+		margin-top: 4em;
+	}
+	
 	.about-container, .history-container {
 		padding: 4em 2em 4em 2em;
 	}
@@ -995,5 +1360,27 @@ footer, .about-footer, .products-footer {
 	
 	.form-label, .form-input, .form-textarea {
 		font-size: 0.5em;
+	}
+	
+	.hero-product .col-6of12 {
+		width: 100%;
+	}
+	
+	.hero-product-title {
+		padding: 2em 1em 0 1em;
+	}
+	
+	.product-image {
+		height: 35em;
+	}
+	
+	.buy-now {
+		font-size: 1.5em;
+	}
+	
+	.button-buy {
+		font-size: 1em;
+		width: 60%;
+		margin-left: -30%;
 	}
 }
