@@ -1389,6 +1389,10 @@ h1.title {
 }
 
 @media (max-width: 35rem) {
+	.home-title {
+		margin-top: 5em;
+	}
+
 	.main-nav {
 		padding: 3em 0 0 0;
 		display: none;
