@@ -34,12 +34,13 @@ h1 {
 a:link {
 	text-decoration: none;
 	color: #999;
+	outline: none;
 }
 
 a:visited {
 	text-decoration: none;
 	color: #999;
-	
+	outline: none;
 }
 
 button:active, button:focus {
@@ -135,6 +136,7 @@ li {
 	top: 0;
 	z-index: 2;
 	padding: 2em 0 2em 7em;
+	margin-bottom: 2em;
 	width: 100%;
 	background-color: #fff;
 	
@@ -151,14 +153,18 @@ li {
 
 .main-nav a {
 	font-family: Medium;
+	transition: 0.3s all ease;
 }
 
 .main-nav a:hover {
 	color: #26C6DA;
+	padding-bottom: 0.5em;
+	border-bottom: 4px solid #26C6DA;
 }
 
 .main-nav a.current-page {
 	color: #26C6DA;
+	border-bottom: 4px solid #26C6DA;
 }
 
 .logo {
@@ -197,19 +203,16 @@ li {
 
 .hero {
 	margin-top: 4em;
-	height: 30em;
+	height: 25em;
 	
-	background-image: url(../img/Hero_DynaTac.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
+	background-color: #26C6DA;
 }
 
 h1.home-title {
 	font-size: 2em;
 	font-family: Bold;
-	color: #26C6DA;
-	padding-top: 5em;
+	color: #fff;
+	padding-top: 3em;
 }
 
 h2.home-sub {
@@ -263,8 +266,11 @@ h2.home-sub {
 	padding: 1.5em 1.5em 0 1.5em;
 }
 
-.board:hover {
+.board:hover, .board2:hover {
 	background-image: url(../img/IAT339-ImageOverlay.png);
+}
+
+.board:hover .board-content, .board:hover .board-header, .board2:hover .board-content, .board2:hover .board-header {
 	color: #fff;
 }
 
@@ -366,9 +372,9 @@ h2.home-sub {
 
 .subscribe {
 	display: block;
-	padding: 14em 0 4em 0;
+	padding: 10em 0 6em 0;
 	background-color: #ddd;
-	background-image: url(../img/wallpaper-dynatac-overlay.jpg);
+	background-image: url(../img/IAT339-ImageOverlay.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -385,7 +391,10 @@ h2.home-sub {
 	font-size: 1.5em;
 	color: #26C6DA;
 	text-align: center;
-	margin-left: 3.5em;
+}
+
+.input-container {
+	width: 100%;
 }
 
 .email-input {
@@ -395,10 +404,10 @@ h2.home-sub {
 	color: #26C6DA;
 	transition: all 0.5s ease;
 	font-size: 1em;
-	margin-bottom: 0.5em;
-	margin-left: 5em;
+	margin: 3em auto 0 auto;
 	padding: 0.5em 0 0.5em 0.5em;
-	width: 20em;
+	width: 40%;
+	left: 50%;
 }
 
 .email-input:focus {
@@ -412,9 +421,10 @@ h2.home-sub {
 	border: 0.2em solid #26C6DA;
 	text-decoration: none;
 	padding: 0.5em 0;
-	margin-left: 5em;
+	margin: 1em auto 0 auto;
 	color: #26C6DA;
-	width: 20em;
+	left: 50%;
+	width: 40%;
 	font-size: 1em;
 	
 	/*interaction set-up*/
@@ -450,9 +460,20 @@ h2.home-sub {
 	background-color: #fff;
 }
 
+.model {
+	font-family: Regular; 
+	font-size: 2em;
+	color: #999;
+	border: none;
+	background-color: #fff;
+	width: 100%;
+	padding: 0.5em 0 0.5em 0;
+}
+
+
 .dynatac-thumbnail, .microtac-thumbnail,.iden-thumbnail {
 	height: 20em;
-	border: 1px solid #000;
+	border: none;
 	transition: 0.3s all ease;
 }
 
@@ -489,6 +510,11 @@ h2.home-sub {
 	display: block;
 }
 
+.dynatac-thumbnail:hover .model {
+	background-color: #26C6DA;
+	color: #fff;
+}
+
 .microtac-thumbnail {
 	background-image: url(../img/Hero_MicroTAC.jpg);
 	background-size: cover;
@@ -501,6 +527,11 @@ h2.home-sub {
 
 .microtac-thumbnail:hover .microtac-overlay {
 	display: block;
+}
+
+.microtac-thumbnail:hover .model {
+	background-color: #26C6DA;
+	color: #fff;
 }
 
 .iden-thumbnail {
@@ -517,14 +548,9 @@ h2.home-sub {
 	display: block;
 }
 
-.model {
-	font-family: Regular; 
-	font-size: 2em;
-	color: #999;
-	border: none;
-	background-color: #fff;
-	width: 100%;
-	padding: 0.5em 0 0.5em 0;
+.iden-thumbnail:hover .model {
+	background-color: #26C6DA;
+	color: #fff;
 }
 
 .career-container {
@@ -547,6 +573,11 @@ h2.home-sub {
 	width: 100%;
 	padding: 0.5em 0 0.5em 0;
 	transition: all 0.3s ease;
+}
+
+.filter1:hover, .filter2:hover, .filter3:hover {
+	background-color: #26C6DA;
+	color: #fff;
 }
 
 .active-tab {
@@ -987,6 +1018,67 @@ footer, .about-footer, .products-footer {
 	margin-top: 5em;
 }
 
+/* ---------------- CHECK OUT PAGE ------------------- */
+
+h1.title {
+	font-size: 3em;
+	font-family: Bold;
+	margin: 1em 0 1em 1em;
+}
+
+.cart-list {
+	width: 80%;
+	margin: 1em auto;
+	padding: 0;
+}
+
+.product-list, .price-list {
+	list-style: none;
+}
+
+.product-list {
+	padding:0;
+}
+
+.price-list {
+	padding-left: 1em;
+}
+
+.product-name, .price-element {
+	background-color: #ddd;
+	border-bottom: 5px solid #fff;
+	height: 2.5em;
+	font-family: Regular;
+	font-size: 2em;
+	padding: 0.5em 1em;
+}
+
+.total, .total-price {
+	background-color: #ccc;
+	border-bottom: 5px solid #fff;
+	height: 2em;
+	font-family: Regular;
+	font-size: 2em;
+	padding: 0.25em 1em;
+}
+
+.purchase-complete {
+	color: #26C6DA;
+	font-size: 3em;
+	font-family: Bold;
+	text-align:center;
+	width: 100%;
+	margin-top: 5em;
+}
+
+.thankyou {
+	color: #26C6DA;
+	font-size: 2em;
+	font-family: Medium;
+	text-align:center;
+	width: 100%;
+}
+
 /* ---------------- MEDIA QUERIES ------------------- */
 
 @media (max-width: 90rem) {
@@ -1184,7 +1276,6 @@ footer, .about-footer, .products-footer {
 	
 	.subscribe p.header {
 		font-size: 1.25em;
-		width: 15em;
 	}
 	
 	.mood-board .col-4of12, .mood-board .col-2of12 , .mood-board .col-3of12, .mood-board .col-6of12   {
@@ -1334,7 +1425,6 @@ footer, .about-footer, .products-footer {
 	
 	.subscribe p.header {
 		margin-left: 0;
-		width: 15em;
 	}
 	
 	.filter1-info, .filter2-info, .filter3-info {
