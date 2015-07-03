@@ -10,14 +10,9 @@
 	box-sizing: border-box;
 }
 
-html  {
-	overflow-x: hidden;
-}
-
 body {
 	margin: 0;
 	padding: 0;
-	overflow-x: hidden;
 }
 
 p {
@@ -52,7 +47,7 @@ button:active, button:focus {
 }
 
 .page-wrapper {
-	overflow-x: hidden;
+	overflow: hidden;
 }
 
 /* Roboto Font */
@@ -378,23 +373,37 @@ h2.home-sub {
 }
 
 .dynatac-thumbnail, .microtac-thumbnail,.iden-thumbnail {
-	height: 10em;
+	height: 20em;
 	border: 1px solid #000;
 }
 
 .dynatac-thumbnail {
-
+	background-image: url(../img/Hero_DynaTac-rasterized.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 .microtac-thumbnail {
-
+	background-image: url(../img/Hero_MicroTAC.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 .iden-thumbnail {
+	background-image: url(../img/iDen.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.dynatac-thumbnail:hover{
 
 }
 
-.dynatac-thumbnail:hover, .microtac-thumbnail:hover,.iden-thumbnail:hover {
+.microtac-thumbnail:hover {
+
+}
+
+.iden-thumbnail:hover {
 
 }
 
@@ -415,7 +424,7 @@ h2.home-sub {
 
 .filter-tabs {
 	width: 100%;
-	padding-top: 4.5em;
+	padding-top: 5em;
 	background-color: #fff;
 }
 
@@ -427,16 +436,13 @@ h2.home-sub {
 	background-color: #fff;
 	width: 100%;
 	padding: 0.5em 0 0.5em 0;
+	transition: all 0.3s ease;
 }
 
 .active-tab {
 	background-color: #26C6DA;
 	border: none;
 	color: #fff;
-}
-
-.job {
-	height: 15em;
 }
 
 .filter2-products, .filter3-products {
@@ -446,7 +452,6 @@ h2.home-sub {
 
 .filter1-products {
 	left: 0;
-	position: absolute;
 	width: 100%;
 }
 
@@ -462,7 +467,7 @@ h2.home-sub {
 	position: relative;
 	width: 100%;
 	height: 20em;
-	overflow-x: hidden;
+	overflow: hidden;
 }
 
 .filter1-info, .filter2-info, .filter3-info {
@@ -491,7 +496,6 @@ h2.home-sub {
 .about-tabs {
 	width: 80%;
 	margin: 0em auto 0 auto;
-	padding-top: 30em;
 }
 
 .about, .history {
@@ -525,10 +529,33 @@ h2.home-sub {
 	color: #fff;
 }
 
+.hero-container {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	height: 30em;
+}
+
+.content-container {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	height: 20em;
+}
+
 .about-container, .history-container {
 	width: 100%;
 	padding: 8em;
 	position: absolute;
+	overflow: hidden;
+}
+
+.about-container {
+	left: 0;
+}
+
+.history-container {
+	left: 100%;
 }
 
 .about-title, .history-title {
@@ -540,10 +567,6 @@ h2.home-sub {
 .about-content, .history-content {
 	font-family: Light;
 	color: #666;
-}
-
-.history-container {
-	left: 100%;
 }
 
 .hero-about {
@@ -568,6 +591,49 @@ h2.home-sub {
 	background-repeat: no-repeat;
 }
 
+
+/* ---------------- CAREER ------------------- */
+
+.job1, .job2, .job3, .job4, .job5, .job6 {
+	height: 15em;
+	border: 1px solid #000;
+}
+
+.job1 {
+	background-image: url(../img/technology_careerpost.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.job2 {
+	background-image: url(../img/design_careerpost.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.job3 {
+	background-image: url(../img/design_careerpost2.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.job4 {
+	background-image: url(../img/backoffice_careerpost.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.job5 {
+	background-image: url(../img/backoffice_careerpost2.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.job6 {
+	background-image: url(../img/backoffice_careerpost3.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
 
 /* ---------------- CONTACT US FORM ------------------- */
 
@@ -698,7 +764,7 @@ footer, .about-footer, .products-footer {
 }
 
 .about-footer {
-	margin-top: 30em;
+	margin-top: 5em;
 }
 
 /* ---------------- MEDIA QUERIES ------------------- */
@@ -785,9 +851,17 @@ footer, .about-footer, .products-footer {
 		width: 100%;
 	}
 	
-		
 	.more-contacts .col-4of12, .more-contacts .col-3of12 {
 		margin-bottom: 2em;
+	}
+	
+	.about, .history {
+		width: 15em;
+	}
+		
+	.filter1, .filter2, .filter3 {
+		font-size: 1.5em;
+		padding: 1em 0 1em 0;
 	}
 }
 
@@ -829,8 +903,16 @@ footer, .about-footer, .products-footer {
 	
 	.filter1, .filter2, .filter3 {
 		font-size: 1.5em;
+		padding: 1em 0 1em 0;
 	}
 	
+	.about, .history {
+		width: 10em;
+	}
+	
+	.filter-tabs {
+		padding-top: 4.5em;
+	}
 }
 
 @media (max-width: 35rem) {
@@ -896,6 +978,10 @@ footer, .about-footer, .products-footer {
 	
 	.filter1-info, .filter2-info, .filter3-info {
 		padding: 6em 2em 4em 2em;
+	}
+	
+	.about, .history {
+		width: 6em;
 	}
 	
 	.about-container, .history-container {
