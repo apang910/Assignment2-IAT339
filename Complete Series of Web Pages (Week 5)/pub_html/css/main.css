@@ -1491,6 +1491,16 @@ h1.title {
 		padding: 2em 1em 0 1em;
 	}
 	
+	.specs, .price {
+		padding-left: 1em;
+	}
+	
+	.product-specs, .product-content {
+		padding-left: 3em;
+		padding-top: 0.5em;
+		padding-right: 2em;
+	}
+
 	.product-image {
 		height: 35em;
 	}
@@ -1503,5 +1513,23 @@ h1.title {
 		font-size: 1em;
 		width: 60%;
 		margin-left: -30%;
+	}
+	
+	.product-name, .price-element, .total, .total-price {
+		font-size: 0.5em;
+	}
+	
+	.product-name {
+		margin-bottom: 0;
+	}
+	
+	.purchase-complete {
+		margin-top: 2em;
+		font-size: 2em;
+	}
+	
+	.dynatac-overlay,.microtac-overlay, .iden-overlay {
+		padding: 1em 1em 1em 2em;
+		font-size: 1em;
 	}
 }
