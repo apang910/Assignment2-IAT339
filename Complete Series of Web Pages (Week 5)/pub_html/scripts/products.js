@@ -14,6 +14,7 @@ $(document).ready(function(){
 		$(".filter3").removeClass("active-tab");
 	});
 	
+	
 	$(".filter2").click(function(){
 		$(".filter1-products").animate({left: "-100%"});
 		$(".filter2-products").animate({left: "0"});
@@ -37,4 +38,5 @@ $(document).ready(function(){
 		$(".filter2").removeClass("active-tab");
 		$(".filter1").removeClass("active-tab");
 	});
+	
 });
