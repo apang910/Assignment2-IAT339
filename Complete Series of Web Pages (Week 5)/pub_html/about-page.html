@@ -18,6 +18,9 @@
 	</head>
 
 	<body>
+	
+		<!--- mobile not reading overflow style, need to create a wrapper and apply the overflow here -->
+		<div class="page-wrapper">
 		
 		<!--- for mobile view -->
 		<div class="nav-mobile">
@@ -33,14 +36,14 @@
 			<div class="col-2of12"><a href="contact-page.html">Contact Us</a></div>
 		</nav>
 		
-		<div id="about-us" class="hero-about">
-		
-		</div>
-		
-		<div id="history" class="hero-history">
-		
-			<div class="clear"></div>	
-		
+		<div class="hero-container">
+			<div id="about-us" class="hero-about">
+			
+			</div>
+			
+			<div id="history" class="hero-history">
+			
+			</div>
 		</div>
 		
 		<div class="about-tabs">
@@ -48,26 +51,29 @@
 			<button class="history">History</button>
 		</div>
 		
-		<div class="about-container">
-			<h1 class="about-title">What we do</h1>
-			<p class="about-content">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at dolor nec elit semper fringilla. 
-			Mauris feugiat tellus diam, sit amet ullamcorper lorem semper vel. Lorem ipsum dolor sit amet, 
-			consectetur adipiscing elit. Cras at dolor nec elit semper fringilla. Mauris feugiat tellus diam, sit amet ullamcorper lorem semper vel.
-			</p>
-		</div>
-		
-		<div class="history-container">
-			<h1 class="history-title">Who we are</h1>
-			<p class="history-content">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at dolor nec elit semper fringilla. 
-			Mauris feugiat tellus diam, sit amet ullamcorper lorem semper vel. Lorem ipsum dolor sit amet, 
-			consectetur adipiscing elit. Cras at dolor nec elit semper fringilla. Mauris feugiat tellus diam, sit amet ullamcorper lorem semper vel.
-			</p>
+		<div class="content-container">
+			<div class="about-container">
+				<h1 class="about-title">What we do</h1>
+				<p class="about-content">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at dolor nec elit semper fringilla. 
+				Mauris feugiat tellus diam, sit amet ullamcorper lorem semper vel. Lorem ipsum dolor sit amet, 
+				consectetur adipiscing elit. Cras at dolor nec elit semper fringilla. Mauris feugiat tellus diam, sit amet ullamcorper lorem semper vel.
+				</p>
+			</div>
+			
+			<div class="history-container">
+				<h1 class="history-title">Who we are</h1>
+				<p class="history-content">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at dolor nec elit semper fringilla. 
+				Mauris feugiat tellus diam, sit amet ullamcorper lorem semper vel. Lorem ipsum dolor sit amet, 
+				consectetur adipiscing elit. Cras at dolor nec elit semper fringilla. Mauris feugiat tellus diam, sit amet ullamcorper lorem semper vel.
+				</p>
+			</div>
 		</div>
 			
 		<footer class="about-footer"> © 2015 Kenny Hong + Alan Pang. All rights reserved </footer>
 		
+		</div>
 		
 	</body>
 
