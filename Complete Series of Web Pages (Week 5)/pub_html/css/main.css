@@ -1155,7 +1155,12 @@ h1.title {
 	.product-image {
 		height: 40em;
 	}
+}
 
+@media (max-width: 70rem) {
+	.product-name, .price-element, .total, .total-price {
+		font-size: 1.5em;
+	}
 }
 	
 @media (max-width: 60rem) {
@@ -1257,6 +1262,7 @@ h1.title {
 	.button-buy {
 		font-size: 1em;
 	}
+	
 }
 
 @media (max-width: 50rem) {
@@ -1338,6 +1344,12 @@ h1.title {
 	.product-image {
 		height: 30em;
 	}
+
+	.product-name, .price-element, .total, .total-price {
+		font-size: 1em;
+	}
+
+	
 }
 
 @media (max-width: 45rem) {
@@ -1359,6 +1371,21 @@ h1.title {
 		height: 50em;
 		width: 110%;
 	}
+	
+	h1.title {
+		font-size: 1.5em;
+		text-align: center;
+		margin: 2em;
+	}
+	
+	.cart-list .col-8of12 {
+		width: 50%;
+	}
+	
+	.cart-list .col-4of12 {
+		width: 50%;
+	}
+
 }
 
 @media (max-width: 35rem) {
